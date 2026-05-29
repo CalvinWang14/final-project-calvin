@@ -25,7 +25,7 @@ These are substantive social science questions with real policy relevance. A sys
 
 A single Common Crawl snapshot contains approximately **3 billion URLs** and roughly **400 terabytes** of raw compressed content. Even after filtering to political domains, a typical crawl yields tens of millions of pages. The analytical workflow has several stages that are individually and jointly computationally intensive:
 
-**Data volume.** The Common Crawl columnar index alone — which we use to identify political-domain URLs before downloading WARC records — is stored as ~300 GB of Parquet files per crawl. Filtering this index sequentially on a single machine would take days; Spark distributes it across a cluster in minutes.
+**Data volume.** The Common Crawl columnar index alone — which I use to identify political-domain URLs before downloading WARC records — is stored as ~300 GB of Parquet files per crawl. Filtering this index sequentially on a single machine would take days; Spark distributes it across a cluster in minutes.
 
 **WARC record fetching.** Each relevant page requires a byte-range HTTP request to the `commoncrawl` S3 bucket to retrieve its WARC record. Fetching tens of millions of records is an inherently parallel I/O problem; Spark's `mapPartitions` allows hundreds of concurrent fetch tasks across worker nodes.
 
@@ -63,7 +63,7 @@ In short, every stage of this pipeline — from index filtering to topic modelin
 
 ### Stage 1 — CC-Index Filtering (`ingestion/crawl_filter.py`)
 
-The Common Crawl columnar index is stored in Parquet format at `s3://commoncrawl/cc-index/table/cc-main/warc/`. We read this ~300 GB dataset with Spark, filter to political domains using a domain allowlist and URL-path keyword list (applied as UDFs), and output a manifest of WARC record locations (filename, byte offset, length). This reduces hundreds of millions of records to hundreds of thousands.
+The Common Crawl columnar index is stored in Parquet format at `s3://commoncrawl/cc-index/table/cc-main/warc/`. I read this ~300 GB dataset with Spark, filter to political domains using a domain allowlist and URL-path keyword list (applied as UDFs), and output a manifest of WARC record locations (filename, byte offset, length). This reduces hundreds of millions of records to hundreds of thousands.
 
 ### Stage 1b — WARC Record Downloading (`ingestion/download_warcs.py`)
 
