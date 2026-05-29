@@ -37,7 +37,7 @@ A single Common Crawl snapshot contains approximately **3 billion URLs** and rou
 
 **Temporal panel.** Analyzing six crawl snapshots across three years multiplies the data volume by 6x and requires merging outputs across crawls — another naturally parallel operation.
 
-In short, every stage of this pipeline — from index filtering to topic modeling to clustering — operates at a scale that makes single-machine computing infeasible both in time and memory. The project is designed from the ground up around AWS EMR and PySpark.
+In short, every stage of this pipeline — from index filtering to topic modeling to clustering — operates at a scale that makes single-machine computing infeasible both in time and memory. The project is designed based on AWS EMR and PySpark.
 
 ---
 
