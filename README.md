@@ -132,7 +132,7 @@ political_polarization/
 
 ## Expected Findings
 
-Based on prior literature and pilot analysis, we expect:
+Based on prior literature and pilot analysis, I expect:
 
 - Domains cluster into 4–5 stable ideological groups across crawls, with left- and right-leaning outlets showing wider lexical distance from center outlets than they do from each other (consistent with "affective polarization" findings in Iyengar et al. 2019).
 - Sentiment negativity is higher at the ideological extremes, particularly for right-leaning outlets (consistent with Soroka et al. 2019 on negativity bias in partisan media).
