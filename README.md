@@ -1,6 +1,7 @@
 # Political Polarization Across the Web Using Common Crawl
 
 **Course:** MACS 30113
+
 **Author:** Calvin Wang
 
 ---
