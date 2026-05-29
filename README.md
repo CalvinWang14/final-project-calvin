@@ -79,7 +79,7 @@ Near-duplicate pages (same URL canonical fingerprint, or identical first-500-cha
 
 ### Stage 3a — Sentiment Analysis (`analysis/sentiment_analysis.py`)
 
-VADER (Valence Aware Dictionary and sEntiment Reasoner) computes compound, positive, negative, and neutral sentiment scores for each document. VADER is well-suited to short, informal web text and requires no GPU. We also compute a **partisan phrase score** — the normalized difference between left-coded and right-coded partisan phrase counts (based on Gentzkow & Shapiro 2010) — for each document. Results are aggregated to `(domain, year_month)` level.
+VADER (Valence Aware Dictionary and sEntiment Reasoner) computes compound, positive, negative, and neutral sentiment scores for each document. VADER is well-suited to short, informal web text and requires no GPU. I also compute a **partisan phrase score** — the normalized difference between left-coded and right-coded partisan phrase counts (based on Gentzkow & Shapiro 2010) — for each document. Results are aggregated to `(domain, year_month)` level.
 
 ### Stage 3b — Topic Modeling (`analysis/topic_modeling.py`)
 
