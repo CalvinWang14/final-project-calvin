@@ -67,7 +67,7 @@ The Common Crawl columnar index is stored in Parquet format at `s3://commoncrawl
 
 ### Stage 1b — WARC Record Downloading (`ingestion/download_warcs.py`)
 
-Using the manifest from Stage 1, we fetch the raw WARC records from the `commoncrawl` S3 bucket via byte-range HTTP requests. Each Spark task handles a batch of ~100 records, and the work is distributed across hundreds of partitions. A minimal WARC parser extracts the HTML payload and target URL. Output is Parquet with columns `(url, html, crawl, fetch_time)`.
+Using the manifest from Stage 1, I fetch the raw WARC records from the `commoncrawl` S3 bucket via byte-range HTTP requests. Each Spark task handles a batch of ~100 records, and the work is distributed across hundreds of partitions. A minimal WARC parser extracts the HTML payload and target URL. Output is Parquet with columns `(url, html, crawl, fetch_time)`.
 
 ### Stage 2a — Text Extraction (`processing/extract_text.py`)
 
