@@ -130,15 +130,13 @@ political_polarization/
 
 ---
 
-## Expected Findings
+## AWS EMR Job Information
 
-Based on prior literature and pilot analysis, I expect:
-
-- Domains cluster into 4–5 stable ideological groups across crawls, with left- and right-leaning outlets showing wider lexical distance from center outlets than they do from each other (consistent with "affective polarization" findings in Iyengar et al. 2019).
-- Sentiment negativity is higher at the ideological extremes, particularly for right-leaning outlets (consistent with Soroka et al. 2019 on negativity bias in partisan media).
-- The polarization index increases monotonically from 2022 to 2024, with a detectable jump around the 2024 election cycle.
-- Topics related to immigration, crime, and election integrity show the highest between-cluster ideological variance.
-
+**EMR Cluster ID:** `j-2KXTOA1WVBN6S`  
+**Cluster setup:** 1 primary node + 4 core nodes, `m5.2xlarge`  
+**Region:** `us-east-1`  
+**S3 Output Path:** `s3://polarization-project/cc-political/`  
+**Crawl processed:** `CC-MAIN-2024-10`
 ---
 
 ## References
