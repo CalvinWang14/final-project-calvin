@@ -132,7 +132,7 @@ political_polarization/
 
 ## AWS EMR Job Information
 
-**EMR Cluster ID:** `j-2QU4YCOOHQ9S4`  
+**EMR Cluster ID:** `j-J14JEYBKHE9N`  
 **Cluster setup:** 1 primary node + 4 core nodes, `m5.2xlarge`  
 **Region:** `us-east-1`  
 **S3 Output Path:** `s3://polarization-project/cc-political/`  
